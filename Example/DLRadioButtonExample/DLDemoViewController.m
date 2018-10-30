@@ -39,6 +39,7 @@
                                                                 Color:color];
         if (i % 2 == 0) {
             radioButton.iconSquare = YES;
+            radioButton.iconSquareRoundedCorner = YES;
         }
         if (i > 1) {
             // put icon on the right side

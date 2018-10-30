@@ -29,6 +29,7 @@ class DemoViewController : UIViewController {
             let radioButton = createRadioButton(frame: frame, title: colorNames[i] + " Button", color: color);
             if (i % 2 == 0) {
                 radioButton.isIconSquare = true;
+                radioButton.isIconSquareRoundedCorner = true;
             }
             if (i > 1) {
                 // put icon on the right side

@@ -74,6 +74,8 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, getter = isIconSquare) IBInspectable BOOL iconSquare;
 
+@property (nonatomic, getter = isIconSquareRoundedCorner) IBInspectable BOOL iconSquareRoundedCorner;
+
 /**
  * @brief Image for radio button icon (optional).
  */

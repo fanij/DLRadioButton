@@ -120,7 +120,11 @@ static BOOL _groupModifing = NO;
     UIBezierPath* iconPath;
     CGRect iconRect = CGRectMake(iconStrokeWidth / 2, iconStrokeWidth / 2, iconSize - iconStrokeWidth, iconSize - iconStrokeWidth);
     if (self.isIconSquare) {
-        iconPath = [UIBezierPath bezierPathWithRect:iconRect];
+        if (self.isIconSquareRoundedCorner){
+            iconPath = [UIBezierPath bezierPathWithRoundedRect:iconRect cornerRadius:iconRect.size.height/5];
+        }else{
+            iconPath = [UIBezierPath bezierPathWithRect:iconRect];
+        }
     } else {
         iconPath = [UIBezierPath bezierPathWithOvalInRect:iconRect];
     }
@@ -134,7 +138,11 @@ static BOOL _groupModifing = NO;
         UIBezierPath* indicatorPath;
         CGRect indicatorRect = CGRectMake((iconSize - indicatorSize) / 2, (iconSize - indicatorSize) / 2, indicatorSize, indicatorSize);
         if (self.isIconSquare) {
-            indicatorPath = [UIBezierPath bezierPathWithRect:indicatorRect];
+            if (self.isIconSquareRoundedCorner){
+                indicatorPath = [UIBezierPath bezierPathWithRoundedRect:indicatorRect cornerRadius:indicatorRect.size.height/5];
+            }else{
+                indicatorPath = [UIBezierPath bezierPathWithRect:indicatorRect];
+            }
         } else {
             indicatorPath = [UIBezierPath bezierPathWithOvalInRect:indicatorRect];
         }
